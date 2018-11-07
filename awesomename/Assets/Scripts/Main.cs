@@ -16,6 +16,9 @@ public class Main : MonoBehaviour
     void Start()
     {
         DOTween.Init();
+#if UNITY_EDITOR
+        UnityEngine.Random.InitState(1337);
+#endif
         game = new Game(references,settings);
     }
 

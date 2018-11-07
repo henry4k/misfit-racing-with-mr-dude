@@ -5,5 +5,5 @@ using UnityEngine.UI;
 [CreateAssetMenu]
 public class Settings : ScriptableObject
 {
-
+    public float blub;
 }
