@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Laser
   layers:
   - Default
   - TransparentFX
@@ -43,4 +45,16 @@ TagManager:
     locked: 0
   - name: Overworld
     uniqueID: 1289738265
+    locked: 0
+  - name: Background
+    uniqueID: 3828064483
+    locked: 0
+  - name: MapObjects
+    uniqueID: 1326195845
+    locked: 0
+  - name: Player
+    uniqueID: 2304498157
+    locked: 0
+  - name: MapObjects2
+    uniqueID: 1525219147
     locked: 0
