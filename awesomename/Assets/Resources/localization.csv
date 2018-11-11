@@ -1,0 +1,7 @@
+Key,Description,Standard
+CHARACTER.NPC,,NPC
+SAY.Overworld.4.Character Name,,Na deine Lizenz fürs Herumlungern!\nNimm das !
+SAY.Overworld.3.Character Name,,Hast du denn eine Lizenz dafür?
+SAY.Overworld.2.NPC,,Wofür? Was willst du denn?!
+SAY.Overworld.1.Character Name,,Na was ist hier denn los?
+CHARACTER.Character Name,,Character Name

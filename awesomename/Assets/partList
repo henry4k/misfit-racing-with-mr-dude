@@ -1,0 +1,16 @@
+﻿{
+	"test": {
+		"name": "test",
+		"category": "engine",
+		"value": 100,
+		"spriteName": "superSprite",
+		"attributes": []
+	},
+	"p2": {
+		"name": "p2",
+		"category": null,
+		"value": 0,
+		"spriteName": null,
+		"attributes": []
+	}
+}

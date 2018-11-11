@@ -297,7 +297,8 @@ MonoBehaviour:
   nameText: NPC
   nameColor: {r: 0.93725497, g: 0.9607844, b: 0.29803923, a: 1}
   soundEffect: {fileID: 0}
-  portraits: []
+  portraits:
+  - {fileID: 21300000, guid: 8261462ce4b889145a7ad8ffa9439d25, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -760,7 +761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 67
+    x: 64
     y: 70
     width: 120
     height: 40
@@ -845,7 +846,7 @@ MonoBehaviour:
   storyText: "Na deine Lizenz f\xFCrs Herumlungern!\nNimm das !"
   description: 
   character: {fileID: 2001241468}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 1ce4d4c6cb5710c4a94c21f9bfc82522, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -871,7 +872,7 @@ MonoBehaviour:
   storyText: "Hast du denn eine Lizenz daf\xFCr?"
   description: 
   character: {fileID: 2001241468}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 1ce4d4c6cb5710c4a94c21f9bfc82522, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -897,7 +898,7 @@ MonoBehaviour:
   storyText: "Wof\xFCr? Was willst du denn?!"
   description: 
   character: {fileID: 185100794}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8261462ce4b889145a7ad8ffa9439d25, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -923,7 +924,7 @@ MonoBehaviour:
   storyText: Na was ist hier denn los?
   description: 
   character: {fileID: 2001241468}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 1ce4d4c6cb5710c4a94c21f9bfc82522, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3171,7 +3172,8 @@ MonoBehaviour:
   nameText: Character Name
   nameColor: {r: 1, g: 0, b: 0, a: 1}
   soundEffect: {fileID: 0}
-  portraits: []
+  portraits:
+  - {fileID: 21300000, guid: 1ce4d4c6cb5710c4a94c21f9bfc82522, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
