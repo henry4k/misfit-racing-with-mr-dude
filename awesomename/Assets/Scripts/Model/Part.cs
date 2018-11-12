@@ -28,20 +28,4 @@ public class Part {
         this.spriteName = spriteName;
         this.attributes = attributes;
     }
-
-    public string getSpriteName() { return this.spriteName; }
-    public void setSpriteName(string spriteName) { this.spriteName = spriteName; }
-
-    public string getName() { return name; }
-    public void setName(string name) { this.name = name; }
-
-    public string getCategory() { return category; }
-    public void setCategory(string category) { this.category = category; }
-
-    public int getValue() { return value; }
-    public void setValue(int value) { this.value = value; }
-
-    public List<Attribute> getAttributes() { return attributes; }
-    public void setAttributes(List<Attribute> attributes) { this.attributes = attributes; }
-
 }

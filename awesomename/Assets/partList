@@ -1,16 +1,1 @@
-﻿{
-	"test": {
-		"name": "test",
-		"category": "engine",
-		"value": 100,
-		"spriteName": "superSprite",
-		"attributes": []
-	},
-	"p2": {
-		"name": "p2",
-		"category": null,
-		"value": 0,
-		"spriteName": null,
-		"attributes": []
-	}
-}
+﻿{"Engine":[{"name":"Small Engine","category":"Engine","value":100,"spriteName":"smallEngine","attributes":[{"category":"Acceleration","value":1},{"category":"MaxSpeed","value":1}]}],"Brake":[],"Wheel":[],"Body":[],"Exhaust":[]}
