@@ -13,13 +13,17 @@ public class Main : MonoBehaviour
 
     Game game;
 
+    private void Awake() {
+        game = new Game(references, settings);
+    }
+
     void Start()
     {
         DOTween.Init();
 #if UNITY_EDITOR
         UnityEngine.Random.InitState(1337);
 #endif
-        game = new Game(references,settings);
+        
     }
 
     void Update()
@@ -29,4 +33,6 @@ public class Main : MonoBehaviour
             game.Update();
         }
     }
+
+    public Game getGame() { return game; }
 }

@@ -15,7 +15,9 @@ public class Game
     private List<Part> bodies = new List<Part>();
     private List<Part> exhausts = new List<Part>();
 
-    private Dictionary<string, List<Part>> parts = new Dictionary<string, List<Part>>();
+    public List<string> categories = new List<string>();
+
+    public Dictionary<string, List<Part>> parts = new Dictionary<string, List<Part>>();
     private float startTime;
     
     public Game(References references, Settings settings)
@@ -31,11 +33,17 @@ public class Game
         parts.Add("Body", bodies);
         parts.Add("Exhaust", exhausts);
 
+        categories.Add("Engine");
+        categories.Add("Brake");
+        categories.Add("Wheel");
+        categories.Add("Body");
+        categories.Add("Exhaust");
         // test Scenario setup
-        Player p = new Player("John", new Car(), 100, 0);
+        Player p = new Player("John", new Car(), 250, 0);
         references.playerReference.player = p;
 
         Part engine1 = new Part();
+        engine1.id = "0";
         engine1.name = "Small Engine";
         engine1.value = 100;
         engine1.spriteName = "smallEngine";
@@ -50,6 +58,24 @@ public class Game
         engine1.attributes.Add(a2);
         engines.Add(engine1);
 
+        Part engine2 = new Part();
+        engine2.id = "1";
+        engine2.name = "Big Engine";
+        engine2.value = 250;
+        engine2.spriteName = "bigEngine";
+        engine2.category = "Engine";
+        Attribute a3 = new Attribute();
+        a3.category = "Acceleration";
+        a3.value = 3;
+        engine2.attributes.Add(a3);
+        Attribute a4 = new Attribute();
+        a4.category = "MaxSpeed";
+        a4.value = 2;
+        engine2.attributes.Add(a4);
+        engines.Add(engine2);
+
+        p.car.engine = engine1;
+        p.partsOwned.Add(engine1);
         //SaveGame.Save<Dictionary<string, List<Part>>>("partList", parts, false, SaveGame.EncodePassword, SaveGame.Serializer, SaveGame.Encoder, SaveGame.DefaultEncoding, SaveGamePath.DataPath);
         //parts = SaveGame.Load<Dictionary<string, List<Part>>>("partList", parts, false, SaveGame.EncodePassword, SaveGame.Serializer, SaveGame.Encoder, SaveGame.DefaultEncoding, SaveGamePath.DataPath);
     }

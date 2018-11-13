@@ -6,4 +6,12 @@ using UnityEngine.UI;
 public class Settings : ScriptableObject
 {
     public float blub;
+
+    [Space(20)]
+    [Header("Movement Controls")]
+    public KeyCode A;
+    public KeyCode D;
+    public KeyCode W;
+    public KeyCode S;
+    public KeyCode Enter;
 }

@@ -15,5 +15,12 @@ public class Attribute {
         this.category = category;
         this.value = value;
     }
+    
+    public Attribute copy() {
+        Attribute copy = new Attribute();
+        copy.category = category;
+        copy.value = value;
 
+        return copy;
+    }
 }

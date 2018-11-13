@@ -13,6 +13,6 @@ public class UI_Money : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        text.text = main.references.playerReference.player.money + "";
+        text.text = main.references.playerReference.player.money + "L";
 	}
 }

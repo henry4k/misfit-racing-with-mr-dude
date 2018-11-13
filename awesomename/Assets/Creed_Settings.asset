@@ -12,3 +12,8 @@ MonoBehaviour:
   m_Name: Creed_Settings
   m_EditorClassIdentifier: 
   blub: 0
+  A: 97
+  D: 100
+  W: 119
+  S: 115
+  Enter: 32
