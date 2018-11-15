@@ -84,4 +84,25 @@ public class Game
     {
 
     }
+
+    public void save(int slot) {
+        SaveGameObject save = new SaveGameObject();
+        save.player = references.playerReference.player;
+        save.scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        save.pos = references.playerReference.transform.position;
+        SaveGame.Save<SaveGameObject>("Save" + slot + ".sav", save, false, SaveGame.EncodePassword, SaveGame.Serializer, SaveGame.Encoder, SaveGame.DefaultEncoding, SaveGamePath.DataPath);
+    }
+
+    public void load(int slot) {
+        SaveGameObject loaded = new SaveGameObject();
+        loaded = SaveGame.Load<SaveGameObject>("Save" + slot + ".sav", loaded, false, SaveGame.EncodePassword, SaveGame.Serializer, SaveGame.Encoder, SaveGame.DefaultEncoding, SaveGamePath.DataPath);
+        references.playerReference.player = loaded.player;
+        if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Equals(loaded.scene)) {
+            references.playerReference.transform.position = loaded.pos;
+        } else {
+            Utils.isGameLoaded = true;
+            UnityEngine.SceneManagement.SceneManager.LoadScene(loaded.scene);
+            
+        }
+    }
 }

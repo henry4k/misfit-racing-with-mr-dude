@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public static class Utils {
+    public static bool isGameLoaded = false;
 
    public static int mod(int x, int m) {
         if (m == 0) return 0;

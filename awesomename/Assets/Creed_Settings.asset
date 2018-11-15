@@ -17,3 +17,4 @@ MonoBehaviour:
   W: 119
   S: 115
   Enter: 32
+  Esc: 27

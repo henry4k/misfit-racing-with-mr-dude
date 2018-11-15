@@ -56,36 +56,44 @@ public class WorkshopManager : MonoBehaviour {
         createStatsPreview();
     }
 
+    public void navNext() {
+        Destroy(partShowCase);
+        index++;
+        createPartShowCase();
+        createStatsPreview();
+    }
+
+    public void navBack() {
+        Destroy(partShowCase);
+        index--;
+        createPartShowCase();
+        createStatsPreview();
+    }
+
+    public void selectCategory(int index) {
+        categoryIndex = index;
+        parts = getParts();
+        index = 0;
+        Destroy(partShowCase);
+        createPartShowCase();
+        highlightCategory();
+        createStatsPreview();
+    }
+
     void Update() {
         if (Input.GetKeyUp(navForward)) {
-            Destroy(partShowCase);
-            index++;
-            createPartShowCase();
-            createStatsPreview();
+            navNext();
         }
         if (Input.GetKeyUp(navBackward)) {
-            Destroy(partShowCase);
-            index--;
-            createPartShowCase();
-            createStatsPreview();
+            navBack();
         }
         if (Input.GetKeyUp(categoryForward)) {
             categoryIndex++;
-            parts = getParts();
-            index = 0;
-            Destroy(partShowCase);
-            createPartShowCase();
-            highlightCategory();
-            createStatsPreview();
+            selectCategory(categoryIndex);
         }
         if (Input.GetKeyUp(categoryBackward)) {
             categoryIndex--;
-            parts = getParts();
-            index = 0;
-            Destroy(partShowCase);
-            createPartShowCase();
-            highlightCategory();
-            createStatsPreview();
+            selectCategory(categoryIndex);
         }
         if (Input.GetKeyUp(enter)) {
             int partIndex = Utils.mod(index, parts.Count);
@@ -332,5 +340,9 @@ public class WorkshopManager : MonoBehaviour {
             }
         }
         return null;
+    }
+
+    public void leave() {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Overworld");
     }
 }

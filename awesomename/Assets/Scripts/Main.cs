@@ -15,6 +15,10 @@ public class Main : MonoBehaviour
 
     private void Awake() {
         game = new Game(references, settings);
+        if(Utils.isGameLoaded) {
+            game.load(1);
+            Utils.isGameLoaded = false;
+        }
     }
 
     void Start()

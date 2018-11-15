@@ -14,4 +14,5 @@ public class Settings : ScriptableObject
     public KeyCode W;
     public KeyCode S;
     public KeyCode Enter;
+    public KeyCode Esc;
 }
