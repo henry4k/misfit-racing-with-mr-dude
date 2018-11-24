@@ -15,4 +15,8 @@ public class Settings : ScriptableObject
     public KeyCode S;
     public KeyCode Enter;
     public KeyCode Esc;
+
+    [Space(20)]
+    public float playerMovementSpeed = 3.5f;
+    public float playerNpcTalkingDistance = 1.4f;
 }

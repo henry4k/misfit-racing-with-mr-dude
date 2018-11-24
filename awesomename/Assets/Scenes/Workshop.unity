@@ -398,7 +398,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b8cfb64b8d10736479eec342e2dd4b27, type: 3}
     m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 0
@@ -473,7 +473,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b8cfb64b8d10736479eec342e2dd4b27, type: 3}
     m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 0
@@ -524,8 +524,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f50cf1433d93cf45a4d36a3be229f0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
-  talkingDistance: 1.4
   body: {fileID: 122390439}
   main: {fileID: 2113472187}
 --- !u!50 &122390439
@@ -643,6 +641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7755671219b7d4547b3e58b90177bf38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
   owPlayerController: {fileID: 122390438}
 --- !u!1 &236147718
 GameObject:
@@ -961,7 +960,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b8cfb64b8d10736479eec342e2dd4b27, type: 3}
     m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 0
@@ -2918,17 +2917,7 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114720296552268550, guid: c872d6e352038e34a882683e0e21cd66,
-        type: 2}
-      propertyPath: workshopManager
-      value: 
-      objectReference: {fileID: 2113472188}
-    - target: {fileID: 114405552023329196, guid: c872d6e352038e34a882683e0e21cd66,
-        type: 2}
-      propertyPath: workshopManager
-      value: 
-      objectReference: {fileID: 2113472188}
-    - target: {fileID: 114978049760843134, guid: c872d6e352038e34a882683e0e21cd66,
+    - target: {fileID: 114691332797255324, guid: c872d6e352038e34a882683e0e21cd66,
         type: 2}
       propertyPath: workshopManager
       value: 
@@ -2938,7 +2927,17 @@ Prefab:
       propertyPath: workshopManager
       value: 
       objectReference: {fileID: 2113472188}
-    - target: {fileID: 114691332797255324, guid: c872d6e352038e34a882683e0e21cd66,
+    - target: {fileID: 114978049760843134, guid: c872d6e352038e34a882683e0e21cd66,
+        type: 2}
+      propertyPath: workshopManager
+      value: 
+      objectReference: {fileID: 2113472188}
+    - target: {fileID: 114405552023329196, guid: c872d6e352038e34a882683e0e21cd66,
+        type: 2}
+      propertyPath: workshopManager
+      value: 
+      objectReference: {fileID: 2113472188}
+    - target: {fileID: 114720296552268550, guid: c872d6e352038e34a882683e0e21cd66,
         type: 2}
       propertyPath: workshopManager
       value: 
@@ -3168,6 +3167,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114217549611479442, guid: aad50e631882b0646a6271acfab5ba48,
+        type: 2}
+      propertyPath: main
+      value: 
+      objectReference: {fileID: 2113472187}
     - target: {fileID: 114762432475895404, guid: aad50e631882b0646a6271acfab5ba48,
         type: 2}
       propertyPath: main
@@ -3183,11 +3187,42 @@ Prefab:
       propertyPath: toDisableWhileOpen.Array.data[1]
       value: 
       objectReference: {fileID: 2113472184}
-    - target: {fileID: 114217549611479442, guid: aad50e631882b0646a6271acfab5ba48,
+    - target: {fileID: 114007642227012032, guid: aad50e631882b0646a6271acfab5ba48,
         type: 2}
-      propertyPath: main
+      propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 2113472187}
+      objectReference: {fileID: 12800000, guid: b8cfb64b8d10736479eec342e2dd4b27,
+        type: 3}
+    - target: {fileID: 114237348158860898, guid: aad50e631882b0646a6271acfab5ba48,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b8cfb64b8d10736479eec342e2dd4b27,
+        type: 3}
+    - target: {fileID: 114145628954387728, guid: aad50e631882b0646a6271acfab5ba48,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b8cfb64b8d10736479eec342e2dd4b27,
+        type: 3}
+    - target: {fileID: 114686417969074328, guid: aad50e631882b0646a6271acfab5ba48,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b8cfb64b8d10736479eec342e2dd4b27,
+        type: 3}
+    - target: {fileID: 114780813689363686, guid: aad50e631882b0646a6271acfab5ba48,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b8cfb64b8d10736479eec342e2dd4b27,
+        type: 3}
+    - target: {fileID: 114184863302806492, guid: aad50e631882b0646a6271acfab5ba48,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b8cfb64b8d10736479eec342e2dd4b27,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aad50e631882b0646a6271acfab5ba48, type: 2}
   m_IsPrefabAsset: 0
@@ -3246,7 +3281,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b8cfb64b8d10736479eec342e2dd4b27, type: 3}
     m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 0
@@ -3704,7 +3739,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b8cfb64b8d10736479eec342e2dd4b27, type: 3}
     m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
@@ -4038,6 +4073,7 @@ GameObject:
   - component: {fileID: 2113472187}
   - component: {fileID: 2113472186}
   - component: {fileID: 2113472188}
+  - component: {fileID: 2113472189}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -4098,6 +4134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 2113472187}
+  audio: {fileID: 2113472189}
   categorySelection: {fileID: 19020371}
   carStats: {fileID: 511402715}
   tooltip: {fileID: 0}
@@ -4117,6 +4154,101 @@ MonoBehaviour:
   text_costs: costs
   text_buy: Buy
   text_install: Install
+--- !u!82 &2113472189
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2113472184}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2125970690
 GameObject:
   m_ObjectHideFlags: 0
