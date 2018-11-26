@@ -18,7 +18,13 @@ public class Main : MonoBehaviour
         if(Utils.isGameLoaded) {
             game.load(1);
             Utils.isGameLoaded = false;
+        } else {
+            if(Utils.currentSave != null) {
+                references.playerReference.player = Utils.currentSave.player;
+                references.playerReference.transform.position = Utils.currentSave.pos;
+            }
         }
+
     }
 
     void Start()

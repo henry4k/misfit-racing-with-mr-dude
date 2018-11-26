@@ -17,6 +17,8 @@ public class Game
 
     public List<string> categories = new List<string>();
 
+    public List<Enemy> enemies = new List<Enemy>();
+
     public Dictionary<string, List<Part>> parts = new Dictionary<string, List<Part>>();
     private float startTime;
     
@@ -25,6 +27,18 @@ public class Game
         startTime = Time.time;
         this.settings = settings;
         this.references = references;
+
+        Enemy e1 = new Enemy();
+        e1.id = "Hans";
+        e1.rank = "Rookie";
+
+        Car enemyCar = new Car();
+        enemyCar.acceleration = 2;
+        enemyCar.maxSpeed = 3;
+        enemyCar.brakingPower = 2;
+        e1.car = enemyCar;
+        enemies.Add(e1);
+
 
         // Categories are the string keys
         parts.Add("Engine", engines);
@@ -104,5 +118,13 @@ public class Game
             UnityEngine.SceneManagement.SceneManager.LoadScene(loaded.scene);
             
         }
+    }
+
+    public void toWorkshop() {
+        SaveGameObject save = new SaveGameObject();
+        save.player = references.playerReference.player;
+        save.pos = references.playerReference.transform.position;
+        Utils.currentSave = save;
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Workshop");
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class WorkshopManager : MonoBehaviour {
     public Main main;
-
+    public AudioSource audio;
     KeyCode navForward;
     KeyCode navBackward;
     KeyCode categoryForward;
@@ -52,7 +52,7 @@ public class WorkshopManager : MonoBehaviour {
         createPartShowCase();
         highlightCategory();
         oldCar = main.references.playerReference.player.car.copy();
-        calculateAttributes(oldCar);
+        Utils.calculateAttributes(oldCar);
         createStatsPreview();
     }
 
@@ -61,6 +61,7 @@ public class WorkshopManager : MonoBehaviour {
         index++;
         createPartShowCase();
         createStatsPreview();
+        audio.Play();
     }
 
     public void navBack() {
@@ -68,6 +69,7 @@ public class WorkshopManager : MonoBehaviour {
         index--;
         createPartShowCase();
         createStatsPreview();
+        audio.Play();
     }
 
     public void selectCategory(int index) {
@@ -78,6 +80,7 @@ public class WorkshopManager : MonoBehaviour {
         createPartShowCase();
         highlightCategory();
         createStatsPreview();
+        audio.Play();
     }
 
     void Update() {
@@ -297,39 +300,7 @@ public class WorkshopManager : MonoBehaviour {
         else if("Exhaust".Equals(p.category)) {
             car.exhaust = p;
         }
-        calculateAttributes(car);
-    }
-
-    /// <summary>
-    /// Recalculates the car attributes(acceleration, maxSpeed..) from the (changed) car parts.
-    /// </summary>
-    /// <param name="car"></param>
-    private void calculateAttributes(Car car) {
-        List<Part> carParts = new List<Part>();
-        carParts.Add(car.engine);
-        carParts.Add(car.brake);
-        carParts.Add(car.wheel);
-        carParts.Add(car.body);
-        carParts.Add(car.exhaust);
-        car.acceleration = 0;
-        car.maxSpeed = 0;
-        car.brakingPower = 0;
-        car.hp = 0;
-        foreach(Part p in carParts) {
-            if(p != null) {
-                foreach (Attribute attribute in p.attributes) {
-                    if ("Acceleration".Equals(attribute.category)) {
-                        car.acceleration += attribute.value;
-                    }
-                    if ("MaxSpeed".Equals(attribute.category)) {
-                        car.maxSpeed += attribute.value;
-                    }
-                    if ("BreakingPower".Equals(attribute.category)) {
-                        car.brakingPower += attribute.value;
-                    }
-                }
-            } 
-        }
+        Utils.calculateAttributes(car);
     }
 
     private GameObject getCarStatsAttributeBarContainer(string attribute) {
@@ -343,6 +314,14 @@ public class WorkshopManager : MonoBehaviour {
     }
 
     public void leave() {
+        if(Utils.currentSave == null) {
+            SaveGameObject currentSave = new SaveGameObject();
+            currentSave.player = main.references.playerReference.player;
+            Utils.currentSave = currentSave;
+        } else {
+            Utils.currentSave.player = main.references.playerReference.player;
+        }
+
         UnityEngine.SceneManagement.SceneManager.LoadScene("Overworld");
     }
 }
