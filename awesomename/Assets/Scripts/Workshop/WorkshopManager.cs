@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public class WorkshopManager : MonoBehaviour {
     public Main main;
-    public AudioSource audio;
+    public new AudioSource audio;
+    public AudioSource buy;
+    public AudioSource equip;
+
     KeyCode navForward;
     KeyCode navBackward;
     KeyCode categoryForward;
@@ -83,6 +86,27 @@ public class WorkshopManager : MonoBehaviour {
         audio.Play();
     }
 
+
+    public void OnClickBuyEquip() {
+        int partIndex = Utils.mod(index, parts.Count);
+        Part p = parts[partIndex];
+        bool isOwned = main.references.playerReference.player.partsOwned.Contains(p);
+        bool isEquiped = checkIsEquiped(p);
+        if (!isOwned) {
+            buyPart(p);
+        }
+        else {
+            if (!isEquiped) {
+                installPart(main.references.playerReference.player.car, p);
+                oldCar = main.references.playerReference.player.car;
+                equip.Play();
+            }
+        }
+        Destroy(partShowCase);
+        createPartShowCase();
+        createStatsPreview();
+    }
+
     void Update() {
         if (Input.GetKeyUp(navForward)) {
             navNext();
@@ -99,21 +123,7 @@ public class WorkshopManager : MonoBehaviour {
             selectCategory(categoryIndex);
         }
         if (Input.GetKeyUp(enter)) {
-            int partIndex = Utils.mod(index, parts.Count);
-            Part p = parts[partIndex];
-            bool isOwned = main.references.playerReference.player.partsOwned.Contains(p);
-            bool isEquiped = checkIsEquiped(p);
-            if (!isOwned) {
-                buyPart(p);
-            } else {
-                if (!isEquiped) {
-                    installPart(main.references.playerReference.player.car, p);
-                    oldCar = main.references.playerReference.player.car;
-                }
-            }
-            Destroy(partShowCase);
-            createPartShowCase();
-            createStatsPreview();
+            OnClickBuyEquip();
         }
     }
 
@@ -122,6 +132,7 @@ public class WorkshopManager : MonoBehaviour {
         if (player.money >= p.value) {
             player.money -= p.value;
             player.partsOwned.Add(p);
+            buy.Play();
         }
         
     }

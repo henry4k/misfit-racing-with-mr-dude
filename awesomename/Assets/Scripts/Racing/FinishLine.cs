@@ -9,11 +9,9 @@ public class FinishLine : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if(this.collision == false) {
-            raceController.isRacing = false;
             audio.Play();
             this.collision = true;
-            raceController.countdownText.text = "Finish!";
+            raceController.endOfRace();
         }
-      
     }
 }

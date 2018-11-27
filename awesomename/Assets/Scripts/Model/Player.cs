@@ -8,6 +8,7 @@ public class Player {
     public int money;
     public int score;
     public string name;
+    public int rank = 0;
 
     public List<Part> partsOwned = new List<Part>();
 

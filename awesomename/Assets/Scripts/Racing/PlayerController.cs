@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
     public Vector2 velocity;
     public AudioSource engineSound;
     public RaceController racecontroller;
+
 	// Use this for initialization
 	void Start () {
         player = main.references.playerReference.player;
@@ -41,28 +42,19 @@ public class PlayerController : MonoBehaviour {
         pos.x += movement;
         if (isMoveablePosition(pos))
             transform.position = pos;
-
     }
 
    private bool isMoveablePosition(Vector3 pos) {
         bool isMoveable = false;
         isMoveable = boundaryCheck(pos);
-        if(isMoveable) {
-            isMoveable = isEnemyAt(pos);
-        }
         return isMoveable;
     }
 
     // return true if withinBoundary
     private bool boundaryCheck(Vector3 pos) {
         bool outOfBoundary = true;
-        if (pos.x > -1 && pos.x < 6) outOfBoundary = false;
-        //if (pos.y > -1) outOfBoundary = false;
-        
+        if (pos.x > -1 && pos.x < 6) outOfBoundary = false;        
         return !outOfBoundary;
     }
 
-    private bool isEnemyAt(Vector3 pos) {
-        return true;    
-    }
 }

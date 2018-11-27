@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class RaceController : MonoBehaviour {
-    public GameObject map;
     public Main main;
     public Rigidbody2D mapBody;
     public Text countdownText;
@@ -12,55 +11,78 @@ public class RaceController : MonoBehaviour {
     public List<GameObject> obstacles = new List<GameObject>();
     public AudioSource timerAudio;
     public AudioSource timerFinishAudio;
-    private PlayerController playerController;
     public float maxSpeedOffset = 1f;
-    private float raceTime = 0;
-    private float raceStartTime = 0;
+    bool isLeaving = false;
+    [Space(20)]
+    public List<GameObject> maps = new List<GameObject>();
+
     [HideInInspector]
     public bool isRacing = false;
+    private bool isStarting = true;
+    List<string> countdown = new List<string>();
+    int countDownIndex = 0;
     private float referenceTime = 150; // time it takes for a perfect race in seconds with maxSpeed 1 and maxSpeedOffset = 1
+    private float raceTime = 0;
+    private float raceStartTime = 0;
+    private PlayerController playerController;
     // Use this for initialization
     void Start () {
+        countdown.Add("2");
+        countdown.Add("1");
+        countdown.Add("Go!");
         playerController = main.references.playerReference.playerController;
-        StartCoroutine(countdown());
+        string map = Utils.currentEnemy.map;
+        foreach(GameObject m in maps) {
+            if (m.name.Equals(map)) {
+                m.SetActive(true);
+                mapBody = m.GetComponent<Rigidbody2D>();
+            }
+        }
+
+        StartCoroutine(doCountdown());
     }
 	
-    private IEnumerator countdown() {
-        timerAudio.Play();
-        yield return new WaitForSeconds(1);
-        countdownText.text = "2";
-        timerAudio.Play();
-        yield return new WaitForSeconds(1);
-        countdownText.text = "1";
-        timerAudio.Play();
-        yield return new WaitForSeconds(1);
-        countdownText.text = "Go!";
+    public void endOfRace() {
+        isRacing = false;
+        float timePassed = raceTime - raceStartTime;
+        if (timePassed < Utils.currentEnemy.timeToBest) {
+            countdownText.text = "Winner!";
+            main.references.playerReference.player.rank = Utils.currentEnemy.rank;
+        }
+        else {
+            countdownText.text = "Loser!";
+        }
+        countdownText.transform.gameObject.SetActive(true);
+    }
 
+    private IEnumerator doCountdown() {
+        while(countDownIndex < countdown.Count) {
+            timerAudio.Play();
+            yield return new WaitForSeconds(1);
+            countdownText.text = countdown[countDownIndex];
+            countDownIndex++;
+        }
         timerFinishAudio.Play();
         yield return new WaitForSeconds(1);
+        
         countdownText.transform.gameObject.SetActive(false);
         isRacing = true;
         startRaceTimer();
+        isStarting = false;
     }
 
     private void startRaceTimer() {
         raceStartTime = Time.timeSinceLevelLoad;
-        //StartCoroutine(raceTimer());
+       
     }
-    private IEnumerator raceTimer() {
-        while(isRacing) {
-            raceTime = Time.timeSinceLevelLoad;
-            int minutes = (int)((raceTime - raceStartTime) / 60f);
-            int seconds = (int)((raceTime - raceStartTime) % 60f);
-            int milliseconds = (int)((raceTime - raceStartTime) * 6f);
-            raceTimerText.text = "" + minutes + ":" + seconds + ":" + milliseconds;
-            yield return new WaitForSeconds(0.1f);
+    private void OnEnable() {
+        if(isStarting) {
+            doCountdown();
         }
-       
+
     }
-	// Update is called once per frame
-	void Update () {
-       
+    // Update is called once per frame
+    void Update () {
         if(isRacing) {
             raceTime = Time.timeSinceLevelLoad;
             float timePassed = raceTime - raceStartTime;
@@ -72,11 +94,7 @@ public class RaceController : MonoBehaviour {
             if (Input.GetKeyDown(main.settings.A)) {
                 playerController.moveToSide(false);
             }
-            if (Input.GetKeyUp(KeyCode.E)) {
-
-            }
         }
-       
     }
 
     private void updateUITimer(float timePassed) {
@@ -105,7 +123,22 @@ public class RaceController : MonoBehaviour {
             else {
                 mapBody.AddForce(-playerController.velocity);
             }
+        } else {
+            if(!isStarting && !isLeaving) StartCoroutine(leave());
         }
-        
+    }
+
+    public IEnumerator leave() {
+        isLeaving = true;
+        yield return new WaitForSeconds(2);
+        if (Utils.currentSave == null) {
+            SaveGameObject currentSave = new SaveGameObject();
+            currentSave.player = main.references.playerReference.player;
+            Utils.currentSave = currentSave;
+        }
+        else {
+            Utils.currentSave.player = main.references.playerReference.player;
+        }
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Overworld");
     }
 }

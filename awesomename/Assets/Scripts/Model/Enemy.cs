@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Enemy {
     public string id;
-    public string rank;
+    public int rank;
     public Car car;
     public float timeToBest;
+    public string map;
 }
