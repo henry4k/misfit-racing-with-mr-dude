@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UI_Money : MonoBehaviour {
     public Main main;
     public Text text;
+    public RaceController raceController;
 	// Use this for initialization
 	void Start () {
 		
@@ -13,6 +14,7 @@ public class UI_Money : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        text.text = main.references.playerReference.player.money + "L";
-	}
+        if(raceController != null) text.text = main.references.playerReference.player.money  + raceController.fuelCollected + "L";
+        else text.text = main.references.playerReference.player.money + "L";
+    }
 }

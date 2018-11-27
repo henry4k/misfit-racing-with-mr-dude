@@ -35,6 +35,7 @@ public class Game
         e1.id = "Hans";
         e1.rank = 1;
         e1.map = "RookieMap";
+        e1.timeToBest = 180;
         Car enemyCar = new Car();
         enemyCar.acceleration = 2;
         enemyCar.maxSpeed = 3;
@@ -136,6 +137,6 @@ public class Game
         save.player = references.playerReference.player;
         //save.pos = references.playerReference.transform.position;
         Utils.currentSave = save;
-       // UnityEngine.SceneManagement.SceneManager.LoadScene("Racing");
+        //UnityEngine.SceneManagement.SceneManager.LoadScene("Racing");
     }
 }

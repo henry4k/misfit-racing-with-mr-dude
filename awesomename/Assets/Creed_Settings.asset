@@ -18,3 +18,6 @@ MonoBehaviour:
   S: 115
   Enter: 32
   Esc: 27
+  Leave: 120
+  playerMovementSpeed: 3.5
+  playerNpcTalkingDistance: 1.4

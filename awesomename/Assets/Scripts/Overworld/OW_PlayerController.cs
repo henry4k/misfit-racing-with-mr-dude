@@ -7,6 +7,7 @@ public class OW_PlayerController : MonoBehaviour {
     private float talkingDistance = 1;
     public Rigidbody2D body;
     public Main main;
+    public GameObject controllerToggle;
 	// Use this for initialization
 	void Start () {
         speed = main.settings.playerMovementSpeed;
@@ -36,6 +37,7 @@ public class OW_PlayerController : MonoBehaviour {
                 Debug.Log(Vector3.Distance(npcRef.transform.position, transform.position));
                 if (Vector3.Distance(npcRef.transform.position, transform.position) < talkingDistance) {
                     npcRef.npc.activateDialog();
+                    controllerToggle.SetActive(true);
                     break; // break because multiple open dialogs are disliked
                 }
             }

@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Overworld.unity
     guid: 07af659d8e355cb429effc94afb01ef8
   - enabled: 1
-    path: Assets/Scenes/Raceing.unity
+    path: Assets/Scenes/Racing.unity
     guid: ed3e4c922a2dd49409985508be645256
   - enabled: 1
     path: Assets/Scenes/Workshop.unity

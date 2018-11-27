@@ -125,6 +125,9 @@ public class WorkshopManager : MonoBehaviour {
         if (Input.GetKeyUp(enter)) {
             OnClickBuyEquip();
         }
+        if (Input.GetKeyUp(main.settings.Leave)) {
+            leave();
+        }
     }
 
     private void buyPart(Part p) {
@@ -232,7 +235,7 @@ public class WorkshopManager : MonoBehaviour {
             Text number = showCase.transform.GetChild(2).GetComponent<Text>();
             Text buyButtonText = buyButton.transform.GetChild(0).GetComponent<Text>();
             number.text = (partIndex +1) + "/" + parts.Count;
-            partImage.sprite = Resources.Load("Textures/" + p.spriteName, typeof(Sprite)) as Sprite;
+            partImage.sprite = Resources.Load("Textures/Cars/" + p.spriteName, typeof(Sprite)) as Sprite;
             buyButton.SetActive(false);
             if (isOwned) {
                 bool isEquiped = checkIsEquiped(p);

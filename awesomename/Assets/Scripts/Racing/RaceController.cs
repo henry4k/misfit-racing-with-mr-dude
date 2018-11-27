@@ -8,6 +8,7 @@ public class RaceController : MonoBehaviour {
     public Rigidbody2D mapBody;
     public Text countdownText;
     public Text raceTimerText;
+    public Text timeToBeat;
     public List<GameObject> obstacles = new List<GameObject>();
     public AudioSource timerAudio;
     public AudioSource timerFinishAudio;
@@ -15,7 +16,7 @@ public class RaceController : MonoBehaviour {
     bool isLeaving = false;
     [Space(20)]
     public List<GameObject> maps = new List<GameObject>();
-
+    public int fuelCollected = 0;
     [HideInInspector]
     public bool isRacing = false;
     private bool isStarting = true;
@@ -25,6 +26,8 @@ public class RaceController : MonoBehaviour {
     private float raceTime = 0;
     private float raceStartTime = 0;
     private PlayerController playerController;
+    private GameObject currentMap;
+    private bool startup = true;
     // Use this for initialization
     void Start () {
         countdown.Add("2");
@@ -35,10 +38,12 @@ public class RaceController : MonoBehaviour {
         foreach(GameObject m in maps) {
             if (m.name.Equals(map)) {
                 m.SetActive(true);
+                currentMap = m;
                 mapBody = m.GetComponent<Rigidbody2D>();
             }
         }
-
+        timeToBeat.text = "Time to beat: \n";
+        timeToBeat.text += updateUITimer(Utils.currentEnemy.timeToBest);
         StartCoroutine(doCountdown());
     }
 	
@@ -52,6 +57,7 @@ public class RaceController : MonoBehaviour {
         else {
             countdownText.text = "Loser!";
         }
+        main.references.playerReference.player.money += fuelCollected;
         countdownText.transform.gameObject.SetActive(true);
     }
 
@@ -76,17 +82,20 @@ public class RaceController : MonoBehaviour {
        
     }
     private void OnEnable() {
-        if(isStarting) {
-            doCountdown();
+        if(startup) {
+            startup = false;
+            return;
         }
-
+        if(isStarting) {
+            StartCoroutine(doCountdown());
+        }
     }
     // Update is called once per frame
     void Update () {
         if(isRacing) {
             raceTime = Time.timeSinceLevelLoad;
             float timePassed = raceTime - raceStartTime;
-            updateUITimer(timePassed);
+            raceTimerText.text = updateUITimer(timePassed);
 
             if (Input.GetKeyDown(main.settings.D)) {
                 playerController.moveToSide(true);
@@ -97,7 +106,7 @@ public class RaceController : MonoBehaviour {
         }
     }
 
-    private void updateUITimer(float timePassed) {
+    private string updateUITimer(float timePassed) {
         int minutes = (int)(timePassed / 60f) % 60;
         string m = "";
         if (minutes < 10) m += "0";
@@ -111,7 +120,7 @@ public class RaceController : MonoBehaviour {
         if (milliseconds < 100) mili += "0";
         if (milliseconds < 10) mili += "0";
         mili += milliseconds;
-        raceTimerText.text = "" + m + ":" + s + ":" + mili;
+        return "" + m + ":" + s + ":" + mili;
     }
 
     private void FixedUpdate() {
@@ -121,6 +130,10 @@ public class RaceController : MonoBehaviour {
             if (mapBody.velocity.y < -main.references.playerReference.player.car.maxSpeed - maxSpeedOffset) {
             }
             else {
+                if (currentMap.transform.position.y > 0 && playerController.velocity.y < 0) {
+                    mapBody.velocity = Vector2.zero;
+                    return;
+                }
                 mapBody.AddForce(-playerController.velocity);
             }
         } else {
