@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
         player = main.references.playerReference.player;
         Utils.calculateAttributes(main.references.playerReference.player.car);
+        transform.position = Vector3.zero;
     }
 	
 	// Update is called once per frame
@@ -31,7 +32,8 @@ public class PlayerController : MonoBehaviour {
 
     public void accelerate(float moveVertical) {
         Vector2 movement = new Vector2(0, moveVertical * 0.5f);
-        velocity = movement * player.car.acceleration;
+        if(movement.y >= 0) velocity = movement * player.car.acceleration;
+        else velocity = movement * player.car.brakingPower;
     }
 
     public void moveToSide(bool right) {

@@ -227,7 +227,10 @@ public class WorkshopManager : MonoBehaviour {
         if(parts != null && parts.Count > 0) {
             int partIndex = Utils.mod(index, parts.Count);
             Part p = parts[partIndex];
-            bool isOwned = main.references.playerReference.player.partsOwned.Contains(p);
+            bool isOwned = false;
+            foreach (Part ownedPart in main.references.playerReference.player.partsOwned) {
+                if (p.name.Equals(ownedPart.name)) isOwned = true;
+            }
             GameObject showCase = Instantiate(partShowCasePrefab, new Vector3(0, 0, 0), Quaternion.identity);
             Image partImage = showCase.GetComponent<Image>();
             Image partOverlay = showCase.transform.GetChild(1).GetComponent<Image>();

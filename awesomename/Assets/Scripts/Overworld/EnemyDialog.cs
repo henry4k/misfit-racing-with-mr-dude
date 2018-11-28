@@ -7,5 +7,6 @@ public class EnemyDialog : Npc {
     
     public new void activateDialog() {
 
+        dialog.SetActive(true);
     }
 }

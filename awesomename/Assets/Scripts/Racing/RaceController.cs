@@ -141,6 +141,10 @@ public class RaceController : MonoBehaviour {
         }
     }
 
+    private void OnDisable() {
+        mapBody.velocity = Vector2.zero;
+    }
+
     public IEnumerator leave() {
         isLeaving = true;
         yield return new WaitForSeconds(2);

@@ -31,19 +31,36 @@ public class Game
         this.settings = settings;
         this.references = references;
 
-        Enemy e1 = new Enemy();
-        e1.id = "Hans";
-        e1.rank = 1;
-        e1.map = "RookieMap";
-        e1.timeToBest = 180;
+        Enemy petrolBrat = new Enemy();
+        petrolBrat.id = "Hans";
+        petrolBrat.rank = 1;
+        petrolBrat.map = "RookieMap";
+        petrolBrat.timeToBest = 180;
         Car enemyCar = new Car();
         enemyCar.acceleration = 2;
         enemyCar.maxSpeed = 3;
         enemyCar.brakingPower = 2;
-        e1.car = enemyCar;
-        enemies.Add(e1);
-        Utils.currentEnemy = e1;
-        brat = e1;
+        petrolBrat.car = enemyCar;
+        enemies.Add(petrolBrat);
+        //Utils.currentEnemy = petrolBrat;
+        brat = petrolBrat;
+
+        Enemy gasolineGentleman = new Enemy();
+        gasolineGentleman.id = "gentleman";
+        gasolineGentleman.rank = 2;
+        gasolineGentleman.map = "ChampionMap";
+        gasolineGentleman.timeToBest = 120;
+        enemies.Add(gasolineGentleman);
+        gentleman = gasolineGentleman;
+
+        Enemy speedsterSmug = new Enemy();
+        speedsterSmug.id = "smug";
+        speedsterSmug.rank = 3;
+        speedsterSmug.map = "FinalMap";
+        speedsterSmug.timeToBest = 90;
+        enemies.Add(speedsterSmug);
+        smug = speedsterSmug;
+
         // Categories are the string keys
         parts.Add("Engine", engines);
         parts.Add("Brake", brakes);
@@ -56,9 +73,9 @@ public class Game
         categories.Add("Wheel");
         categories.Add("Body");
         categories.Add("Exhaust");
-        // test Scenario setup
-        Player p = new Player("John", new Car(), 250, 0);
-        references.playerReference.player = p;
+        
+        Player p = new Player("Mr Dude", new Car(), 150, 0);
+      
 
         Part engine1 = new Part();
         engine1.id = "0";
@@ -92,8 +109,95 @@ public class Game
         engine2.attributes.Add(a4);
         engines.Add(engine2);
 
+
+        Part exhaust = new Part();
+        exhaust.id = "2";
+        exhaust.name = "exhaust pipe";
+        exhaust.spriteName = "exhaust";
+        exhaust.value = 150;
+        exhaust.category = "Exhaust";
+        Attribute exAtt = new Attribute();
+        exAtt.value = 1;
+        exAtt.category = "Acceleration";
+        exhaust.attributes.Add(exAtt);
+        exhausts.Add(exhaust);
+
+        Part body = new Part();
+        body.id = "3";
+        body.name = "car body (nice)";
+        body.spriteName = "body";
+        body.value = 200;
+        body.category = "Body";
+        Attribute bodyAttribute = new Attribute();
+        bodyAttribute.category = "MaxSpeed";
+        bodyAttribute.value = 1;
+        body.attributes.Add(bodyAttribute);
+        bodies.Add(body);
+
+        Part brake = new Part();
+        brake.id = "4";
+        brake.name = "brakes";
+        brake.value = 150;
+        brake.spriteName = "brakes";
+        brake.category = "Brake";
+        Attribute attBrake = new Attribute();
+        attBrake.category = "BreakingPower";
+        attBrake.value = 1;
+        brake.attributes.Add(attBrake);
+        brakes.Add(brake);
+
+        Part brake2 = new Part();
+        brake2.id = "5";
+        brake2.name = "brakes the good ones";
+        brake2.value = 300;
+        brake2.spriteName = "brakesToGoodOnes";
+        brake2.category = "Brake";
+        Attribute attBrake2 = new Attribute();
+        attBrake2.category = "BreakingPower";
+        attBrake2.value = 3;
+        brake2.attributes.Add(attBrake2);
+        brakes.Add(brake2);
+
+
+        Part wheel = new Part();
+        wheel.id = "6";
+        wheel.name = "Wheels";
+        wheel.spriteName = "wheels";
+        wheel.value = 200;
+        wheel.category = "Wheel";
+        Attribute wMaxSpeed = new Attribute();
+        wMaxSpeed.value = 1;
+        wMaxSpeed.category = "MaxSpeed";
+        Attribute wBrakingPower = new Attribute();
+        wBrakingPower.value = 1;
+        wBrakingPower.category = "BreakingPower";
+        wheel.attributes.Add(wMaxSpeed);
+        wheel.attributes.Add(wBrakingPower);
+        wheels.Add(wheel);
+
+        Part racingWheels = new Part();
+        racingWheels.id = "7";
+        racingWheels.name = "Racing wheels";
+        racingWheels.value = 500;
+        racingWheels.spriteName = "racingWheels";
+        racingWheels.category = "Wheel";
+        Attribute rwMaxSpeed = new Attribute();
+        rwMaxSpeed.value = 2;
+        rwMaxSpeed.category = "MaxSpeed";
+        Attribute rwAcceleration = new Attribute();
+        rwAcceleration.value = 1;
+        rwAcceleration.category = "Acceleration";
+        Attribute rwBrakingPower = new Attribute();
+        rwBrakingPower.value = 2;
+        rwBrakingPower.category = "BreakingPower";
+        racingWheels.attributes.Add(rwMaxSpeed);
+        racingWheels.attributes.Add(rwBrakingPower);
+        racingWheels.attributes.Add(rwAcceleration);
+        wheels.Add(racingWheels);
+
         p.car.engine = engine1;
         p.partsOwned.Add(engine1);
+        references.playerReference.player = p;
         //SaveGame.Save<Dictionary<string, List<Part>>>("partList", parts, false, SaveGame.EncodePassword, SaveGame.Serializer, SaveGame.Encoder, SaveGame.DefaultEncoding, SaveGamePath.DataPath);
         //parts = SaveGame.Load<Dictionary<string, List<Part>>>("partList", parts, false, SaveGame.EncodePassword, SaveGame.Serializer, SaveGame.Encoder, SaveGame.DefaultEncoding, SaveGamePath.DataPath);
     }
@@ -129,13 +233,13 @@ public class Game
         save.player = references.playerReference.player;
         save.pos = references.playerReference.transform.position;
         Utils.currentSave = save;
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Workshop");
+        //UnityEngine.SceneManagement.SceneManager.LoadScene("Workshop");
     }
 
     public void toRaceTrack() {
         SaveGameObject save = new SaveGameObject();
         save.player = references.playerReference.player;
-        //save.pos = references.playerReference.transform.position;
+        save.pos = references.playerReference.transform.position;
         Utils.currentSave = save;
         //UnityEngine.SceneManagement.SceneManager.LoadScene("Racing");
     }

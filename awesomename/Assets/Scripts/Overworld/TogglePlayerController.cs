@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,11 +9,21 @@ public class TogglePlayerController : MonoBehaviour {
 
 
     private void OnEnable() {
-        if (playerController.isActiveAndEnabled) playerController.enabled = false;
-        else playerController.enabled = true;
+        try {
+            if (playerController.isActiveAndEnabled) playerController.enabled = false;
+            else playerController.enabled = true;
+        }
+        catch (Exception e) {
+
+        }
     }
     private void OnDisable() {
-        if (playerController.isActiveAndEnabled) playerController.enabled = false;
-        else playerController.enabled = true;
+        try {
+            if (playerController.isActiveAndEnabled) playerController.enabled = false;
+            else playerController.enabled = true;
+        } catch(Exception e) {
+
+        }
+        
     }
 }

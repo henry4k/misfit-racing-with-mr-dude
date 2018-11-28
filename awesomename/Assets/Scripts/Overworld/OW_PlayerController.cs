@@ -34,10 +34,9 @@ public class OW_PlayerController : MonoBehaviour {
 
         if (Input.GetKeyUp(main.settings.Enter)) {
             foreach (NpcReference npcRef in main.references.npcReferences) {
-                Debug.Log(Vector3.Distance(npcRef.transform.position, transform.position));
                 if (Vector3.Distance(npcRef.transform.position, transform.position) < talkingDistance) {
                     npcRef.npc.activateDialog();
-                    controllerToggle.SetActive(true);
+                    controllerToggle.SetActive(false);
                     break; // break because multiple open dialogs are disliked
                 }
             }
