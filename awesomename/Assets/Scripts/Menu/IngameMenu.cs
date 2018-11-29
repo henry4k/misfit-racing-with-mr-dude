@@ -90,6 +90,7 @@ public class IngameMenu : MonoBehaviour {
     }
 
     public void OnNewGame() {
+        Utils.isNewGameStart = true;
         UnityEngine.SceneManagement.SceneManager.LoadScene("Overworld");
     }
 
