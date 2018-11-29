@@ -8,7 +8,7 @@ public class WorkshopManager : MonoBehaviour {
     public new AudioSource audio;
     public AudioSource buy;
     public AudioSource equip;
-
+    public AudioSource denied;
     KeyCode navForward;
     KeyCode navBackward;
     KeyCode categoryForward;
@@ -136,6 +136,8 @@ public class WorkshopManager : MonoBehaviour {
             player.money -= p.value;
             player.partsOwned.Add(p);
             buy.Play();
+        } else {
+            denied.Play();
         }
         
     }

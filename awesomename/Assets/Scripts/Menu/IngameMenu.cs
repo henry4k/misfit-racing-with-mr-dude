@@ -11,6 +11,9 @@ public class IngameMenu : MonoBehaviour {
     private int index;
     public int restart = 0;
     public List<GameObject> buttons = new List<GameObject>();
+    public GameObject credits;
+
+    public bool mainMenu = false;
 	// Use this for initialization
 	void Start () {
 		
@@ -26,20 +29,44 @@ public class IngameMenu : MonoBehaviour {
         }
         if (Input.GetKeyUp(main.settings.Enter)) {
             audioClick.Play();
-           if (Utils.mod(index, buttons.Count) == 0) {
-                OnResume();
-            } else if (restart != 0 && Utils.mod(index, buttons.Count) == 1) {
-                OnRestart();
-            } else if(restart == 0 && Utils.mod(index, buttons.Count) == 1) {
-                OnSave();
-            } else if (restart == 0 && Utils.mod(index, buttons.Count) == 2) {
-                OnLoad();
-            } else if (restart == 0 && Utils.mod(index, buttons.Count) == 3) {
-                OnQuit();
+            if(!mainMenu) {
+                if (Utils.mod(index, buttons.Count) == 0) {
+                    OnResume();
+                }
+                else if (restart != 0 && Utils.mod(index, buttons.Count) == 1) {
+                    OnRestart();
+                }
+                else if (restart == 0 && Utils.mod(index, buttons.Count) == 1) {
+                    OnSave();
+                }
+                else if (restart == 0 && Utils.mod(index, buttons.Count) == 2) {
+                    OnLoad();
+                }
+                else if (restart == 0 && Utils.mod(index, buttons.Count) == 3) {
+                    OnQuit();
+                }
+                else if (restart != 0 && Utils.mod(index, buttons.Count) == 2) {
+                    OnQuit();
+                }
+            } else {
+               
+                if (Utils.mod(index, buttons.Count) == 0) {
+                    OnNewGame();
+                }
+                else if (restart == 0 && Utils.mod(index, buttons.Count) == 1) {
+                    OnLoad();
+                }
+                else if (restart == 0 && Utils.mod(index, buttons.Count) == 2) {
+                    OnCredits();
+                }
+                else if (restart == 0 && Utils.mod(index, buttons.Count) == 3) {
+                    OnQuit();
+                }
+                else if (restart != 0 && Utils.mod(index, buttons.Count) == 2) {
+                    OnQuit();
+                }
             }
-            else if (restart != 0 && Utils.mod(index, buttons.Count) == 2) {
-                OnQuit();
-            }
+          
         }
     }
 
@@ -62,12 +89,21 @@ public class IngameMenu : MonoBehaviour {
         gameObject.SetActive(false);
     }
 
+    public void OnNewGame() {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Overworld");
+    }
+
     public void OnSave() {
         main.getGame().save(1);
     }
 
     public void OnLoad() {
         main.getGame().load(1);
+    }
+
+    public void OnCredits() {
+        credits.SetActive(true);
+        gameObject.SetActive(false);
     }
 
     public void OnQuit() {

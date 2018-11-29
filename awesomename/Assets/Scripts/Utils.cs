@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class Utils {
     public static bool isGameLoaded = false;
-
+    public static bool isNewGameStart = false;
     public static SaveGameObject currentSave = null; //inbetween scene save
     public static Enemy currentEnemy = null;
 

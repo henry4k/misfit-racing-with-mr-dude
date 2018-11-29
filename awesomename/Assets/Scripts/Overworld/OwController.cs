@@ -8,6 +8,7 @@ public class OwController : MonoBehaviour {
     public Flowchart enemyBrat;
     public Flowchart enemyGentleman;
     public Flowchart enemySmug;
+    public Flowchart startUp;
     private void Start() {
         enemyBrat.SetIntegerVariable("PlayerRank", main.references.playerReference.player.rank);
         enemyBrat.SetIntegerVariable("EnemyRank", main.getGame().brat.rank);
@@ -17,6 +18,8 @@ public class OwController : MonoBehaviour {
 
         enemySmug.SetIntegerVariable("PlayerRank", main.references.playerReference.player.rank);
         enemySmug.SetIntegerVariable("EnemyRank", main.getGame().smug.rank);
+
+        startUp.SetBooleanVariable("isNewGame", Utils.isNewGameStart);
     }
     public void startRaceBrat() {
         Utils.currentEnemy = main.getGame().brat;
