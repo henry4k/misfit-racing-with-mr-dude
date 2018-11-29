@@ -255,7 +255,7 @@ public class WorkshopManager : MonoBehaviour {
                 partOverlay.enabled = false;
             }
             else {
-                t.text = p.name + " " + text_costs + " " + p.value;
+                t.text = p.name + " " + text_costs + " " + p.value + "L";
                 buyButton.SetActive(true);
                 buyButtonText.text = text_buy;
                 partOverlay.enabled = true;

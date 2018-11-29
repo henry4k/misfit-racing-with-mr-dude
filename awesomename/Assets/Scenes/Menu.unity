@@ -207,7 +207,8 @@ MonoBehaviour:
     Effects:\n-Engine Sound\n\thttps://assetstore.unity.com/packages/audio/sound-fx/engines-123836\n-UI
     Sounds\n\thttps://assetstore.unity.com/packages/audio/sound-fx/free-casual-game-sfx-pack-54116\n-Bell
     Blip\t\thttps://freesound.org/people/looppool/sounds/13119/\n-Airhorn\t\thttps://freesound.org/people/jacksonacademyashmore/sounds/414208/\n-CashRegister\n\thttps://freesound.org/people/CapsLok/sounds/184438/\n-Screwdriver\n\thttps://freesound.org/people/jandobes97/sounds/379476/\n\nMusic:\n-Battle
-    for Honour by YouFulca\n-Are you kidding by YouFulca\n\thttps://wingless-seraph.net/en/material-music.html\n-Just
+    for Honour by YouFulca\n-Are you kidding by YouFulca\n-Victory Jingle by YouFulca\n-GameOver
+    Jingle by YouFulca\thttps://wingless-seraph.net/en/material-music.html\n-Just
     Chill by Aaron Krogh\n\nGame was made for Game Off 2018\r\nHosted by GitHub, Lee
     Reilly \xB7 #GitHubGameOff"
 --- !u!222 &227856961
@@ -942,7 +943,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1439788915
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1190,102 +1191,102 @@ Prefab:
     - target: {fileID: 224683524247606798, guid: aad50e631882b0646a6271acfab5ba48,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224683524247606798, guid: aad50e631882b0646a6271acfab5ba48,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224683524247606798, guid: aad50e631882b0646a6271acfab5ba48,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224683524247606798, guid: aad50e631882b0646a6271acfab5ba48,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 360
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224085334433217028, guid: aad50e631882b0646a6271acfab5ba48,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224085334433217028, guid: aad50e631882b0646a6271acfab5ba48,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224085334433217028, guid: aad50e631882b0646a6271acfab5ba48,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224085334433217028, guid: aad50e631882b0646a6271acfab5ba48,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 360
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224153999443297122, guid: aad50e631882b0646a6271acfab5ba48,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224153999443297122, guid: aad50e631882b0646a6271acfab5ba48,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224153999443297122, guid: aad50e631882b0646a6271acfab5ba48,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224153999443297122, guid: aad50e631882b0646a6271acfab5ba48,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 360
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224659393065077156, guid: aad50e631882b0646a6271acfab5ba48,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224659393065077156, guid: aad50e631882b0646a6271acfab5ba48,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224659393065077156, guid: aad50e631882b0646a6271acfab5ba48,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224659393065077156, guid: aad50e631882b0646a6271acfab5ba48,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 360
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224683524247606798, guid: aad50e631882b0646a6271acfab5ba48,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -24
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224085334433217028, guid: aad50e631882b0646a6271acfab5ba48,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -104
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224153999443297122, guid: aad50e631882b0646a6271acfab5ba48,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -184
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224659393065077156, guid: aad50e631882b0646a6271acfab5ba48,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -264
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1030399807661624, guid: aad50e631882b0646a6271acfab5ba48, type: 2}
       propertyPath: m_IsActive
@@ -1424,7 +1425,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1812267546315930, guid: aad50e631882b0646a6271acfab5ba48, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aad50e631882b0646a6271acfab5ba48, type: 2}
