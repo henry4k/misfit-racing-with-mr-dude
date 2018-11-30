@@ -28,6 +28,7 @@ public class RaceController : MonoBehaviour {
     private PlayerController playerController;
     private GameObject currentMap;
     private bool startup = true;
+    public bool uiTimerUpdate = true;
     // Use this for initialization
     void Start () {
         countdown.Add("2");
@@ -90,10 +91,11 @@ public class RaceController : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         if(isRacing) {
-            raceTime = Time.timeSinceLevelLoad;
-            float timePassed = raceTime - raceStartTime;
-            raceTimerText.text = updateUITimer(timePassed);
-
+            if(uiTimerUpdate) {
+                raceTime = Time.timeSinceLevelLoad;
+                float timePassed = raceTime - raceStartTime;
+                raceTimerText.text = updateUITimer(timePassed);
+            }
             if (Input.GetKeyDown(main.settings.D)) {
                 playerController.moveToSide(true);
             }

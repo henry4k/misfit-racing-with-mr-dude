@@ -14,6 +14,8 @@ public class FinishLine : MonoBehaviour {
         if(this.collision == false) {
             
             this.collision = true;
+            raceController.uiTimerUpdate = false;
+            //raceController.main.references.playerReference.gameObject.SetActive(false);
             finish.transform.gameObject.SetActive(true);
             //raceController.endOfRace();
             bool hasWon = raceController.hasWon();

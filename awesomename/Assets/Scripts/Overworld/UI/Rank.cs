@@ -11,14 +11,16 @@ public class Rank : MonoBehaviour {
         string rank = "";
         int playerNumberRank = main.references.playerReference.player.rank;
         if(playerNumberRank == 0) {
-            rank = "Rookie";
+            rank = "Just got his licence.";
         } else if(playerNumberRank == 1) {
-            rank = "Champion";
+            rank = "Won a race, \nthinks he is the greatest.";
         } else if(playerNumberRank == 2) {
-            rank = "Master";
+            rank = "Won two races a real Champion.";
+        } else if (playerNumberRank == 3) {
+            rank = "Won all races. \nClaims to be the \"new\" Ricky Bobby.";
         }
 
-        text.text = "Rank: " + rank;
+        text.text = "Rank: \n" + rank;
 
     }
 }

@@ -8,6 +8,7 @@ public class OW_PlayerController : MonoBehaviour {
     public Rigidbody2D body;
     public Main main;
     public GameObject controllerToggle;
+    public Animator animator;
 	// Use this for initialization
 	void Start () {
         speed = main.settings.playerMovementSpeed;
@@ -23,7 +24,8 @@ public class OW_PlayerController : MonoBehaviour {
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
         float moveVertical = Input.GetAxisRaw("Vertical");
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
-        
+        animator.SetFloat("Horizontal", moveHorizontal);
+        animator.SetFloat("Vertical", moveVertical);
         // move player or stop him immidiatly
         if (moveHorizontal == 0 && moveVertical == 0) {
             body.velocity = Vector3.zero;

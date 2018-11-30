@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class IngameMenu : MonoBehaviour {
     public Main main;
     public new AudioSource audio;
-    public new AudioSource audioClick;
+    public AudioSource audioClick;
     public List<GameObject> toDisableWhileOpen = new List<GameObject>();
     private int index;
     public int restart = 0;
@@ -96,10 +96,12 @@ public class IngameMenu : MonoBehaviour {
 
     public void OnSave() {
         main.getGame().save(1);
+        OnResume();
     }
 
     public void OnLoad() {
         main.getGame().load(1);
+        OnResume();
     }
 
     public void OnCredits() {
