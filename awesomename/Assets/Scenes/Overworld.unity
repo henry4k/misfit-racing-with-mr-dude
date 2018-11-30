@@ -25748,7 +25748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 348
+    x: 347
     y: 85
     width: 120
     height: 40
@@ -25832,7 +25832,7 @@ MonoBehaviour:
   indentLevel: 1
   storyText: 'Hi,
 
-    i''m  {color=red} Mr Dude{/color} you know.'
+    i''m {color=red} Mr Dude{/color} you know.'
   description: 
   character: {fileID: 2001241468}
   portrait: {fileID: 0}
@@ -27352,7 +27352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 834414725}
+  selectedFlowchart: {fileID: 945745016}
 --- !u!4 &1208741432
 Transform:
   m_ObjectHideFlags: 1

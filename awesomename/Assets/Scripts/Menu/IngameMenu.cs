@@ -101,7 +101,7 @@ public class IngameMenu : MonoBehaviour {
 
     public void OnLoad() {
         main.getGame().load(1);
-        OnResume();
+        if(!mainMenu) OnResume();
     }
 
     public void OnCredits() {

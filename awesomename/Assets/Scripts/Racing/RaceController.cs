@@ -56,6 +56,7 @@ public class RaceController : MonoBehaviour {
         isRacing = false;
         
         main.references.playerReference.player.money += fuelCollected;
+        fuelCollected = 0;
         countdownText.transform.gameObject.SetActive(true);
     }
 

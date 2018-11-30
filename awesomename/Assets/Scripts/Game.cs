@@ -42,7 +42,6 @@ public class Game
         enemyCar.brakingPower = 2;
         petrolBrat.car = enemyCar;
         enemies.Add(petrolBrat);
-        //Utils.currentEnemy = petrolBrat;
         brat = petrolBrat;
 
         Enemy gasolineGentleman = new Enemy();
@@ -57,7 +56,7 @@ public class Game
         speedsterSmug.id = "smug";
         speedsterSmug.rank = 3;
         speedsterSmug.map = "FinalMap";
-        speedsterSmug.timeToBest = 90;
+        speedsterSmug.timeToBest = 105;
         enemies.Add(speedsterSmug);
         smug = speedsterSmug;
 
@@ -198,15 +197,10 @@ public class Game
         p.car.engine = engine1;
         p.partsOwned.Add(engine1);
         references.playerReference.player = p;
-        //SaveGame.Save<Dictionary<string, List<Part>>>("partList", parts, false, SaveGame.EncodePassword, SaveGame.Serializer, SaveGame.Encoder, SaveGame.DefaultEncoding, SaveGamePath.DataPath);
-        //parts = SaveGame.Load<Dictionary<string, List<Part>>>("partList", parts, false, SaveGame.EncodePassword, SaveGame.Serializer, SaveGame.Encoder, SaveGame.DefaultEncoding, SaveGamePath.DataPath);
     }
-
-    public void Update()
-    {
+    public void Update() {
 
     }
-
     public void save(int slot) {
         SaveGameObject save = new SaveGameObject();
         save.player = references.playerReference.player;
@@ -225,7 +219,6 @@ public class Game
         } else {
             Utils.isGameLoaded = true;
             UnityEngine.SceneManagement.SceneManager.LoadScene(loaded.scene);
-            
         }
     }
 
@@ -234,7 +227,6 @@ public class Game
         save.player = references.playerReference.player;
         save.pos = references.playerReference.transform.position;
         Utils.currentSave = save;
-        //UnityEngine.SceneManagement.SceneManager.LoadScene("Workshop");
     }
 
     public void toRaceTrack() {
@@ -242,6 +234,5 @@ public class Game
         save.player = references.playerReference.player;
         save.pos = references.playerReference.transform.position;
         Utils.currentSave = save;
-        //UnityEngine.SceneManagement.SceneManager.LoadScene("Racing");
     }
 }
