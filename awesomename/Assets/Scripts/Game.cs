@@ -112,7 +112,7 @@ public class Game
 
         Part exhaust = new Part();
         exhaust.id = "2";
-        exhaust.name = "exhaust pipe";
+        exhaust.name = "Exhaust pipe";
         exhaust.spriteName = "exhaust";
         exhaust.value = 150;
         exhaust.category = "Exhaust";
@@ -124,7 +124,7 @@ public class Game
 
         Part body = new Part();
         body.id = "3";
-        body.name = "car body (nice)";
+        body.name = "Car body (nice)";
         body.spriteName = "body";
         body.value = 200;
         body.category = "Body";
@@ -148,7 +148,7 @@ public class Game
 
         Part brake2 = new Part();
         brake2.id = "5";
-        brake2.name = "brakes the good ones";
+        brake2.name = "Brakes the good ones";
         brake2.value = 300;
         brake2.spriteName = "brakesToGoodOnes";
         brake2.category = "Brake";
@@ -218,6 +218,7 @@ public class Game
     public void load(int slot) {
         SaveGameObject loaded = new SaveGameObject();
         loaded = SaveGame.Load<SaveGameObject>("Save" + slot + ".sav", loaded, false, SaveGame.EncodePassword, SaveGame.Serializer, SaveGame.Encoder, SaveGame.DefaultEncoding, SaveGamePath.DataPath);
+        if (loaded.player == null && loaded.scene == null) return;
         references.playerReference.player = loaded.player;
         if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Equals(loaded.scene)) {
             references.playerReference.transform.position = loaded.pos;

@@ -46,17 +46,14 @@ public class RaceController : MonoBehaviour {
         timeToBeat.text += updateUITimer(Utils.currentEnemy.timeToBest);
         StartCoroutine(doCountdown());
     }
-	
+	public bool hasWon() {
+        float timePassed = raceTime - raceStartTime;
+        if (timePassed < Utils.currentEnemy.timeToBest) { return true; }
+        else return false;
+    }
     public void endOfRace() {
         isRacing = false;
-        float timePassed = raceTime - raceStartTime;
-        if (timePassed < Utils.currentEnemy.timeToBest) {
-            countdownText.text = "Winner!";
-            main.references.playerReference.player.rank = Utils.currentEnemy.rank;
-        }
-        else {
-            countdownText.text = "Loser!";
-        }
+        
         main.references.playerReference.player.money += fuelCollected;
         countdownText.transform.gameObject.SetActive(true);
     }

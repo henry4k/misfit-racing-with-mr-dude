@@ -20,4 +20,4 @@ MonoBehaviour:
   Esc: 27
   Leave: 120
   playerMovementSpeed: 3.5
-  playerNpcTalkingDistance: 1.8
+  playerNpcTalkingDistance: 2

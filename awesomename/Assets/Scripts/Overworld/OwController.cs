@@ -35,4 +35,7 @@ public class OwController : MonoBehaviour {
         main.getGame().toRaceTrack();
     }
 
+    public void newGameFalse() {
+        Utils.isNewGameStart = false;
+    }
 }
