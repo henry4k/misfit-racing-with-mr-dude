@@ -484,7 +484,7 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 49754413}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b42ed18c05683d14fbbde88fded71977, type: 2}
   m_CullingMode: 0
@@ -530,7 +530,7 @@ SpriteRenderer:
   m_SortingLayerID: 1326195845
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e74b600af5aaed149a78f78a11133727, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6b6ff5d905da6c34eb4f04e91fb5b174, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1001,7 +1001,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 122390437}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1945689602}
@@ -1082,11 +1082,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: Workshop Employer
-  nameColor: {r: 0.93725497, g: 0.9607844, b: 0.29803923, a: 1}
+  nameText: Harold
+  nameColor: {r: 0.28627452, g: 0.48235297, b: 0.67058825, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: 8261462ce4b889145a7ad8ffa9439d25, type: 3}
+  - {fileID: 21300000, guid: 86b2c2e7b1ce8e44985a0432e49b4a67, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -1468,11 +1468,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: NPC
-  nameColor: {r: 0.93725497, g: 0.9607844, b: 0.29803923, a: 1}
+  nameText: Kevin
+  nameColor: {r: 0.5647059, g: 0.49803925, b: 0.27450982, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: 8261462ce4b889145a7ad8ffa9439d25, type: 3}
+  - {fileID: 21300000, guid: c23147fdb10ca3c4ea2bceee020bc1cf, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -1504,7 +1504,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 206598682}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: -4.51, z: 0}
+  m_LocalPosition: {x: 1, y: -5.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1556381228}
@@ -1584,7 +1584,7 @@ SpriteRenderer:
   m_SortingLayerID: 1326195845
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e74b600af5aaed149a78f78a11133727, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86b2c2e7b1ce8e44985a0432e49b4a67, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 1
@@ -1602,7 +1602,7 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 206598682}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b42ed18c05683d14fbbde88fded71977, type: 2}
   m_CullingMode: 0
@@ -4405,10 +4405,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: Petrol Brat
-  nameColor: {r: 0.98725617, g: 0.990566, b: 0.07943219, a: 1}
+  nameColor: {r: 0.9921569, g: 0.54901963, b: 0.36862746, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: 8261462ce4b889145a7ad8ffa9439d25, type: 3}
+  - {fileID: 21300000, guid: 6b6ff5d905da6c34eb4f04e91fb5b174, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -4554,6 +4554,303 @@ Transform:
   m_Father: {fileID: 480918154}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &309023545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 142980, guid: 5e7fbc8d4eb714b279eeeef2262c1e1a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 309023554}
+  - component: {fileID: 309023553}
+  - component: {fileID: 309023552}
+  - component: {fileID: 309023551}
+  - component: {fileID: 309023550}
+  - component: {fileID: 309023549}
+  - component: {fileID: 309023548}
+  - component: {fileID: 309023547}
+  - component: {fileID: 309023546}
+  - component: {fileID: 309023557}
+  - component: {fileID: 309023556}
+  - component: {fileID: 309023555}
+  m_Layer: 0
+  m_Name: Francine Dialog (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &309023546
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 309023545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de9232e9295ed476a8cfb707b5c242b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 33
+  indentLevel: 0
+  frameCount:
+    integerRef: {fileID: 0}
+    integerVal: 15
+--- !u!114 &309023547
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 309023545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 5
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 299520537}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  targetGameObjectOLD: {fileID: 0}
+--- !u!114 &309023548
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 309023545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 4
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 309023545}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  targetGameObjectOLD: {fileID: 0}
+--- !u!114 &309023549
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 309023545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 3
+  indentLevel: 0
+  storyText: Hey sweety.
+  description: 
+  character: {fileID: 1663713536}
+  portrait: {fileID: 21300000, guid: cfa40674e93d2d14283f69fad21d37dd, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &309023550
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 309023545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: test2
+  value: 0
+--- !u!114 &309023551
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 309023545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff5d850a887844fe87ae7d366d3ab5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 309023552}
+--- !u!114 &309023552
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 11433304, guid: 5e7fbc8d4eb714b279eeeef2262c1e1a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 309023545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 70
+    y: 110
+    width: 121
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 0
+  blockName: NPC1 Dialog
+  description: 
+  eventHandler: {fileID: 309023551}
+  commandList:
+  - {fileID: 309023549}
+  - {fileID: 309023556}
+  - {fileID: 309023557}
+  - {fileID: 309023555}
+  - {fileID: 309023546}
+  - {fileID: 309023548}
+  - {fileID: 309023547}
+--- !u!114 &309023553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 11430050, guid: 5e7fbc8d4eb714b279eeeef2262c1e1a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 309023545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  scrollPos: {x: 1, y: 0}
+  variablesScrollPos: {x: 0, y: 0}
+  variablesExpanded: 1
+  blockViewHeight: 400
+  zoom: 1
+  scrollViewRect:
+    serializedVersion: 2
+    x: -343
+    y: -340
+    width: 1114
+    height: 859
+  selectedBlocks: []
+  selectedCommands: []
+  variables:
+  - {fileID: 309023550}
+  description: 
+  stepPause: 0
+  colorCommands: 1
+  hideComponents: 1
+  saveSelection: 1
+  localizationId: 
+  showLineNumbers: 0
+  hideCommands: []
+  luaEnvironment: {fileID: 0}
+  luaBindingName: flowchart
+--- !u!4 &309023554
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 467082, guid: 5e7fbc8d4eb714b279eeeef2262c1e1a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 309023545}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 440715029}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &309023555
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 309023545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 36
+  indentLevel: 0
+  storyText: Ahh, thats too bad.
+  description: 
+  character: {fileID: 1663713536}
+  portrait: {fileID: 21300000, guid: cfa40674e93d2d14283f69fad21d37dd, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &309023556
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 309023545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 35
+  indentLevel: 0
+  storyText: Do you know where my cousin Kyle is?
+  description: 
+  character: {fileID: 1663713536}
+  portrait: {fileID: 21300000, guid: cfa40674e93d2d14283f69fad21d37dd, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &309023557
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 309023545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 34
+  indentLevel: 0
+  storyText: No... sorry.
+  description: 
+  character: {fileID: 2001241468}
+  portrait: {fileID: 21300000, guid: cfa40674e93d2d14283f69fad21d37dd, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1 &386743326
 GameObject:
   m_ObjectHideFlags: 0
@@ -4879,6 +5176,7 @@ Transform:
   - {fileID: 945744980}
   - {fileID: 1443460061}
   - {fileID: 480427419}
+  - {fileID: 309023554}
   m_Father: {fileID: 666371211}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5275,8 +5573,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: So you went all the way up here.
   description: 
-  character: {fileID: 185100794}
-  portrait: {fileID: 21300000, guid: 8261462ce4b889145a7ad8ffa9439d25, type: 3}
+  character: {fileID: 848200888}
+  portrait: {fileID: 21300000, guid: 2ddc3ec0cdedc6b42b8bc8d9c9d8246f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5327,8 +5625,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Good job.
   description: 
-  character: {fileID: 185100794}
-  portrait: {fileID: 21300000, guid: 8261462ce4b889145a7ad8ffa9439d25, type: 3}
+  character: {fileID: 848200888}
+  portrait: {fileID: 21300000, guid: 2ddc3ec0cdedc6b42b8bc8d9c9d8246f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5353,7 +5651,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 71
-    y: 110
+    y: 109
     width: 121
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -5487,7 +5785,7 @@ MonoBehaviour:
     they prepare the track with a bunch of obstacles."
   description: 
   character: {fileID: 185100794}
-  portrait: {fileID: 21300000, guid: 8261462ce4b889145a7ad8ffa9439d25, type: 3}
+  portrait: {fileID: 21300000, guid: c23147fdb10ca3c4ea2bceee020bc1cf, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5554,7 +5852,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 503347994}
   selectedCommands:
-  - {fileID: 503347997}
+  - {fileID: 503347999}
   variables:
   - {fileID: 503348003}
   description: 
@@ -5637,7 +5935,7 @@ MonoBehaviour:
   storyText: You better watch out.
   description: 
   character: {fileID: 185100794}
-  portrait: {fileID: 21300000, guid: 8261462ce4b889145a7ad8ffa9439d25, type: 3}
+  portrait: {fileID: 21300000, guid: c23147fdb10ca3c4ea2bceee020bc1cf, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -21356,7 +21654,8 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 627153444}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 627153455}
   variables:
   - {fileID: 627153447}
   description: 
@@ -21617,7 +21916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 18
   indentLevel: 1
-  text: i need a place to hide.
+  text: I need a place to hide.
   description: 
   targetBlock: {fileID: 627153454}
   hideIfVisited: 0
@@ -23657,7 +23956,7 @@ SpriteRenderer:
   m_SortingLayerID: 1326195845
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e74b600af5aaed149a78f78a11133727, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2ddc3ec0cdedc6b42b8bc8d9c9d8246f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -23679,7 +23978,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1556381228}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &829927327
 Animator:
@@ -23688,7 +23987,7 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 829927321}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b42ed18c05683d14fbbde88fded71977, type: 2}
   m_CullingMode: 0
@@ -23799,7 +24098,7 @@ MonoBehaviour:
     your car.
   description: 
   character: {fileID: 2001241468}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 829a8a19b940a844f931aa9e0e5fabfc, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -23825,7 +24124,7 @@ MonoBehaviour:
   storyText: You must be mistaken.
   description: 
   character: {fileID: 2001241468}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 829a8a19b940a844f931aa9e0e5fabfc, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -23851,7 +24150,7 @@ MonoBehaviour:
   storyText: 'You must be the new butler. You''re late. '
   description: 
   character: {fileID: 1825836391}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 183eedea6c8437046a37c78df08132ff, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -23874,10 +24173,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 33
   indentLevel: 1
-  storyText: Yeah, i just arrived. By the way i'm {color=red} Mr Dude{/color}.
+  storyText: Yeah, i just arrived. By the way i'm {color=red}Mr Dude{/color}.
   description: 
   character: {fileID: 2001241468}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 829a8a19b940a844f931aa9e0e5fabfc, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -24020,7 +24319,7 @@ MonoBehaviour:
   storyText: I see. Not bad. But sadly a win has no meaning for a commoner like you.
   description: 
   character: {fileID: 1825836391}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 183eedea6c8437046a37c78df08132ff, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -24094,7 +24393,7 @@ MonoBehaviour:
   storyText: As my ancestors always used to say noblesse oblige.
   description: 
   character: {fileID: 1825836391}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 183eedea6c8437046a37c78df08132ff, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -24346,7 +24645,7 @@ MonoBehaviour:
   storyText: Good Sir i have never seen you before on this prestigious racing track.
   description: 
   character: {fileID: 1825836391}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 183eedea6c8437046a37c78df08132ff, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -24638,7 +24937,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 123
-    y: 96
+    y: 95
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -24696,7 +24995,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 834414724}
   selectedCommands:
-  - {fileID: 834414710}
+  - {fileID: 834414727}
   variables:
   - {fileID: 834414721}
   - {fileID: 834414720}
@@ -24726,7 +25025,7 @@ MonoBehaviour:
   storyText: A commoner with such rank. Preposterous!
   description: 
   character: {fileID: 1825836391}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 183eedea6c8437046a37c78df08132ff, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -24752,7 +25051,7 @@ MonoBehaviour:
   storyText: That means i will race you again. What do you say?
   description: 
   character: {fileID: 1825836391}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 183eedea6c8437046a37c78df08132ff, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -24779,7 +25078,7 @@ MonoBehaviour:
     if you were so kind.
   description: 
   character: {fileID: 1825836391}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 183eedea6c8437046a37c78df08132ff, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -24789,6 +25088,57 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!1 &848200887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 100000, guid: b20518d45890e4be59ba82946f88026c,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 848200889}
+  - component: {fileID: 848200888}
+  m_Layer: 0
+  m_Name: NPC 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &848200888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 11400000, guid: b20518d45890e4be59ba82946f88026c,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 848200887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: Wayne
+  nameColor: {r: 0.5882353, g: 0.68235296, b: 0.32941177, a: 1}
+  soundEffect: {fileID: 0}
+  portraits:
+  - {fileID: 21300000, guid: 2ddc3ec0cdedc6b42b8bc8d9c9d8246f, type: 3}
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: 
+--- !u!4 &848200889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 400000, guid: b20518d45890e4be59ba82946f88026c,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 848200887}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1801240708}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &849993043
 GameObject:
   m_ObjectHideFlags: 0
@@ -25430,7 +25780,7 @@ MonoBehaviour:
     walks past you.
   description: 
   character: {fileID: 1512722213}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 784981eeed52cb8489833cf3edac4a8a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -25453,10 +25803,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 25
   indentLevel: 1
-  storyText: What was your name again.
+  storyText: What was your name again?
   description: 
   character: {fileID: 1512722213}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 784981eeed52cb8489833cf3edac4a8a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -25527,10 +25877,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 22
   indentLevel: 1
-  storyText: Ah i think i remember now. I DON'T CARE.
+  storyText: Ah, i think i remember now. I DON'T CARE.
   description: 
   character: {fileID: 1512722213}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 784981eeed52cb8489833cf3edac4a8a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -25556,7 +25906,7 @@ MonoBehaviour:
   storyText: What brings you here?
   description: 
   character: {fileID: 1512722213}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 784981eeed52cb8489833cf3edac4a8a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -25780,7 +26130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 10
   indentLevel: 1
-  text: It's Mr Dude!  Mr Dude you know!
+  text: It's Mr Dude! Mr Dude you know!
   description: 
   targetBlock: {fileID: 945745001}
   hideIfVisited: 0
@@ -25807,7 +26157,7 @@ MonoBehaviour:
   storyText: I don't care who you are.
   description: 
   character: {fileID: 1512722213}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 784981eeed52cb8489833cf3edac4a8a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -25832,7 +26182,7 @@ MonoBehaviour:
   indentLevel: 1
   storyText: 'Hi,
 
-    i''m {color=red} Mr Dude{/color} you know.'
+    i''m {color=red}Mr Dude{/color} you know.'
   description: 
   character: {fileID: 2001241468}
   portrait: {fileID: 0}
@@ -27319,9 +27669,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: Barrel
-  nameColor: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  nameColor: {r: 0.29803923, g: 0.34901962, b: 0.44705886, a: 1}
   soundEffect: {fileID: 0}
-  portraits: []
+  portraits:
+  - {fileID: 21300000, guid: fc2f44c5ccc6ecb4e89137c842f07674, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: The barrel is empty.
@@ -27352,7 +27703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 945745016}
+  selectedFlowchart: {fileID: 503347995}
 --- !u!4 &1208741432
 Transform:
   m_ObjectHideFlags: 1
@@ -27462,123 +27813,6 @@ SpriteRenderer:
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.875, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!1 &1231182455
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1231182456}
-  - component: {fileID: 1231182460}
-  - component: {fileID: 1231182459}
-  - component: {fileID: 1231182458}
-  - component: {fileID: 1231182457}
-  m_Layer: 0
-  m_Name: Barrel (9)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1231182456
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1231182455}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 33.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1556381228}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1231182457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1231182455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bf1e29f441353f4caa70ac4dbec7a49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npc: {fileID: 1231182458}
---- !u!114 &1231182458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1231182455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16074c26d0a6a7b4090444ee380556ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog: {fileID: 1443460060}
---- !u!70 &1231182459
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1231182455}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.8125, y: 1.0625}
-  m_Direction: 0
---- !u!212 &1231182460
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1231182455}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1326195845
-  m_SortingLayer: 3
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fc2f44c5ccc6ecb4e89137c842f07674, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.8125, y: 1.0625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -27804,7 +28038,7 @@ MonoBehaviour:
   storyText: You should go back to your mommy racer boy.
   description: 
   character: {fileID: 254532091}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 6b6ff5d905da6c34eb4f04e91fb5b174, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -27829,10 +28063,10 @@ MonoBehaviour:
   indentLevel: 1
   storyText: 'Hi,
 
-    i''m {color=red} Mr Dude{/color} you know.'
+    i''m {color=red}Mr Dude{/color} you know.'
   description: 
   character: {fileID: 2001241468}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 829a8a19b940a844f931aa9e0e5fabfc, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -27861,7 +28095,7 @@ MonoBehaviour:
     Let me prove it.'
   description: 
   character: {fileID: 254532091}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 6b6ff5d905da6c34eb4f04e91fb5b174, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -28207,7 +28441,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1265707942}
   selectedCommands:
-  - {fileID: 1265707951}
+  - {fileID: 1265707931}
   variables:
   - {fileID: 1265707939}
   - {fileID: 1265707938}
@@ -28397,7 +28631,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 254532091}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 6b6ff5d905da6c34eb4f04e91fb5b174, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -28449,7 +28683,7 @@ MonoBehaviour:
     Ha!'
   description: 
   character: {fileID: 254532091}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 6b6ff5d905da6c34eb4f04e91fb5b174, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -28476,7 +28710,7 @@ MonoBehaviour:
     many times.
   description: 
   character: {fileID: 254532091}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 6b6ff5d905da6c34eb4f04e91fb5b174, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -29918,7 +30152,7 @@ MonoBehaviour:
   storyText: The Barrel is empty.
   description: 
   character: {fileID: 1194984416}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: fc2f44c5ccc6ecb4e89137c842f07674, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -29993,7 +30227,8 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 1443460067}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1443460065}
   variables: []
   description: 
   stepPause: 0
@@ -30355,10 +30590,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: Speedster Smug
-  nameColor: {r: 0.41509432, g: 0.16458204, b: 0.013705952, a: 1}
+  nameColor: {r: 0.36862746, g: 0.27058825, b: 0.25882354, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: 8261462ce4b889145a7ad8ffa9439d25, type: 3}
+  - {fileID: 21300000, guid: 784981eeed52cb8489833cf3edac4a8a, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -30593,8 +30828,8 @@ Transform:
   - {fileID: 1377535634}
   - {fileID: 1326549821}
   - {fileID: 1487030022}
-  - {fileID: 1231182456}
   - {fileID: 829927326}
+  - {fileID: 1750064907}
   m_Father: {fileID: 480918154}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31224,7 +31459,7 @@ MonoBehaviour:
   storyText: They only accept gas as payment.
   description: 
   character: {fileID: 137313377}
-  portrait: {fileID: 21300000, guid: 8261462ce4b889145a7ad8ffa9439d25, type: 3}
+  portrait: {fileID: 21300000, guid: 86b2c2e7b1ce8e44985a0432e49b4a67, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -31264,7 +31499,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 137313377}
-  portrait: {fileID: 21300000, guid: 8261462ce4b889145a7ad8ffa9439d25, type: 3}
+  portrait: {fileID: 21300000, guid: 86b2c2e7b1ce8e44985a0432e49b4a67, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -31328,10 +31563,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1626323992}
-  selectedCommands:
-  - {fileID: 1626324004}
-  - {fileID: 0}
+  - {fileID: 1626323998}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -31487,6 +31720,57 @@ Transform:
   - {fileID: 1512722212}
   m_Father: {fileID: 1283427826}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1663713535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 100000, guid: b20518d45890e4be59ba82946f88026c,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1663713537}
+  - component: {fileID: 1663713536}
+  m_Layer: 0
+  m_Name: Girl2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1663713536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 11400000, guid: b20518d45890e4be59ba82946f88026c,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1663713535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: Francine
+  nameColor: {r: 0.5647059, g: 0.49803925, b: 0.27450982, a: 1}
+  soundEffect: {fileID: 0}
+  portraits:
+  - {fileID: 21300000, guid: cfa40674e93d2d14283f69fad21d37dd, type: 3}
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: 
+--- !u!4 &1663713537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 400000, guid: b20518d45890e4be59ba82946f88026c,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1663713535}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1801240708}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1669803240
 GameObject:
@@ -31973,6 +32257,158 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1750064900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1750064907}
+  - component: {fileID: 1750064906}
+  - component: {fileID: 1750064902}
+  - component: {fileID: 1750064901}
+  - component: {fileID: 1750064905}
+  - component: {fileID: 1750064904}
+  - component: {fileID: 1750064903}
+  m_Layer: 0
+  m_Name: Francine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1750064901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1750064900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bf1e29f441353f4caa70ac4dbec7a49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 1750064902}
+--- !u!114 &1750064902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1750064900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16074c26d0a6a7b4090444ee380556ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog: {fileID: 309023545}
+--- !u!70 &1750064903
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1750064900}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.65384614, y: 0.88461536}
+  m_Direction: 0
+--- !u!70 &1750064904
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1750064900}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.65384614, y: 0.88461536}
+  m_Direction: 0
+--- !u!95 &1750064905
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1750064900}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b42ed18c05683d14fbbde88fded71977, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &1750064906
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1750064900}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1326195845
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: cfa40674e93d2d14283f69fad21d37dd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1750064907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1750064900}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.5, y: -2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1556381228}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1779819301
 GameObject:
   m_ObjectHideFlags: 0
@@ -32157,7 +32593,7 @@ SpriteRenderer:
   m_SortingLayerID: 1326195845
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e74b600af5aaed149a78f78a11133727, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c23147fdb10ca3c4ea2bceee020bc1cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -32200,7 +32636,7 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1780531090}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b42ed18c05683d14fbbde88fded71977, type: 2}
   m_CullingMode: 0
@@ -32344,6 +32780,8 @@ Transform:
   m_Children:
   - {fileID: 185100793}
   - {fileID: 137313376}
+  - {fileID: 848200889}
+  - {fileID: 1663713537}
   m_Father: {fileID: 1283427826}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -32388,10 +32826,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: Gasoline Gentleman
-  nameColor: {r: 0, g: 0.2610607, b: 1, a: 1}
+  nameColor: {r: 0.32941177, g: 0.44705886, b: 0.48627454, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: 8261462ce4b889145a7ad8ffa9439d25, type: 3}
+  - {fileID: 21300000, guid: 183eedea6c8437046a37c78df08132ff, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -32695,7 +33133,7 @@ SpriteRenderer:
   m_SortingLayerID: 1326195845
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e74b600af5aaed149a78f78a11133727, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 183eedea6c8437046a37c78df08132ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -32713,7 +33151,7 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1944196650}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b42ed18c05683d14fbbde88fded71977, type: 2}
   m_CullingMode: 0
@@ -33190,7 +33628,7 @@ SpriteRenderer:
   m_SortingLayerID: 1326195845
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e74b600af5aaed149a78f78a11133727, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 784981eeed52cb8489833cf3edac4a8a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -33208,7 +33646,7 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1993610671}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b42ed18c05683d14fbbde88fded71977, type: 2}
   m_CullingMode: 0
@@ -33267,7 +33705,7 @@ MonoBehaviour:
   nameColor: {r: 1, g: 0, b: 0, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: 1ce4d4c6cb5710c4a94c21f9bfc82522, type: 3}
+  - {fileID: 21300000, guid: 829a8a19b940a844f931aa9e0e5fabfc, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -33448,8 +33886,8 @@ MonoBehaviour:
   - {fileID: 1377535635}
   - {fileID: 1326549822}
   - {fileID: 1487030023}
-  - {fileID: 1231182457}
   - {fileID: 829927322}
+  - {fileID: 1750064901}
 --- !u!114 &2113472187
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
-using DG.Tweening;
 using UnityEngine;
 using BayatGames.SaveGameFree;
 public class Game
