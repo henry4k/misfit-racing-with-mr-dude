@@ -427,7 +427,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000030518, y: -71.6}
-  m_SizeDelta: {x: 3300, y: 1873.6}
+  m_SizeDelta: {x: 2500, y: 1873.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &227856959
 MonoBehaviour:
@@ -475,18 +475,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Special Thanks to all who played the game. We hope you had as much fun
-    as we had making it.\n\nProgramming, Dialogs, Level Design, and a lot of other
-    Stuff: \n\nPixel Graphics:\n\nExternal Assets:\n-Fungus \nhttps://fungusgames.com/\n-Save
-    Game Free - Gold Update\thttps://assetstore.unity.com/packages/tools/input-management/save-game-free-gold-update-81519\n\nFont:\n-Pixel
-    Operator by Jayvee Enaguas (HarvettFox96), licensed under a Creative Commons Zero
-    (CC0) 1.0. \xA9 2009-2018\n\nSound Effects:\n-Engine Sound\thttps://assetstore.unity.com/packages/audio/sound-fx/engines-123836\n-UI
-    Sounds\thttps://assetstore.unity.com/packages/audio/sound-fx/free-casual-game-sfx-pack-54116\n-Bell
-    Blip\t\thttps://freesound.org/people/looppool/sounds/13119/\n-Airhorn\t\thttps://freesound.org/people/jacksonacademyashmore/sounds/414208/\n-CashRegister\thttps://freesound.org/people/CapsLok/sounds/184438/\n-Screwdriver\thttps://freesound.org/people/jandobes97/sounds/379476/\n\nMusic:\n-Battle
+  m_Text: "Special Thanks to all who played the game. \nWe hope you had as much fun
+    as we had making it.\n\n\nProduction, Programming, Design: Dominik Reitz\n\nGraphics:
+    Henry Kielmann\n\nThanks also to Sven J\xFCtte. \nWithout him and his help the
+    project wouldn't even have started.\n\n\nExternal Assets:\n-Fungus \n-Save Game
+    Free - Gold Update\t\n\nFont:\n-Pixel Operator\n\nSound Effect Packs:\n-Engine
+    Sound from the unity asset store\n-UI Sounds from the unity asset store\t\n\nSounds
+    from freesound.org\n-Bell Blip\t\t\n-Airhorn\t\t\n-CashRegister\t\n-Screwdriver\t\n\nMusic:\n-Battle
     for Honour by YouFulca\n-Are you kidding by YouFulca\n-Victory Jingle by YouFulca\n-GameOver
-    Jingle by YouFulca\t\nhttps://wingless-seraph.net/en/index.html\n\n-Just Chill
-    by Aaron Krogh\n\nGame was made for Game Off 2018\r\nHosted by GitHub, Lee Reilly
-    \xB7 #GitHubGameOff"
+    Jingle by YouFulca\t\n\n-Just Chill by Aaron Krogh\n\nLinks to the assets are
+    provided in the projects Readme file.\n\nGame was made for Game Off 2018\r\nHosted
+    by GitHub, Lee Reilly \xB7 #GitHubGameOff"
 --- !u!222 &227856961
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1545,7 +1544,7 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: New Game
@@ -6548,7 +6547,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 98875de1551d20b4ca14dd04d6983871, type: 3}
-    m_FontSize: 192
+    m_FontSize: 132
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -6559,7 +6558,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Menu
+  m_Text: 'Misfit Racing with Mr Dude
+
+'
 --- !u!222 &2136698171
 CanvasRenderer:
   m_ObjectHideFlags: 0

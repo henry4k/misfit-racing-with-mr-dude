@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
@@ -29,7 +28,7 @@ public class Main : MonoBehaviour
 
     void Start()
     {
-        DOTween.Init();
+
 #if UNITY_EDITOR
         UnityEngine.Random.InitState(1337);
 #endif
